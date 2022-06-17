@@ -6,8 +6,10 @@ const app = express();
 const publicPath = path.resolve(__dirname, './public');
 app.use( express.static(publicPath) );
 
-app.listen(process.env.port || 3000, () => {
-    console.log("Servidor en marcha");
+let puerto = process.env.port || 3000;
+
+app.listen(puerto, () => {
+    console.log("Servidor corriendo en el puerto " + puerto);
 });
 
 app.get('/', (req, res) => {
