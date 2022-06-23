@@ -196,14 +196,28 @@ main{
     color: #fff
 }
 
-input:valid:required {
-    border-radius: 15px;
-    border: solid 1px green;
+.iconos-footer:hover {
+    color: aqua;
 }
 
-input:invalid:required {
-    border-radius: 15px;
-    border: solid 1px red;
+.input-de-login:hover {
+    border: solid 1px gray;
+}
+
+.input-de-c-o-v:hover,
+.input-de-register:hover,
+.input-de-intereses:hover {
+    border: solid 1px gray;
+}
+
+.botón-de-borrar:hover {
+    background-color: brown;
+    color: #fff;
+}
+
+.botón-de-register:hover {
+    background-color: #0022AA;
+    color: #fff
 }
 
 /* FOOTER ---------------------------------------------------------------------------------------- */
@@ -223,66 +237,112 @@ footer {
     transition: 450ms;
 }
 
-.iconos-footer:hover {
-    color: aqua;
-}
-
 /* REGISTRO ------------------------------------------------------------------------------------ */
 
 .form-register {
-    background-color: antiquewhite;
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
+    display: grid;
+    justify-content: center;
     margin: 10px;
-
 }
 
-.compra-o-venta {
+.registrarse {
+    font-size: 40px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.perfil-del-usuario {
+    padding: 10px;
+}
+
+.compra-venta {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    margin:5px
+}
+
+.input-de-c-o-v {
+    width: 10%;
+    height: 20px;
+}
+
+.input-de-intereses {
+    width: 10%;
+    height: 20px;
+}
+
+.input-de-register {
+    border: solid 1px lightgray;
+    width: 120%;
+    height: 30px;
+}
+
+.categorías-de-interés {
+    padding: 10px;
 }
 
 .intereses {
-    display: flex;
-    flex-wrap: wrap;
+    margin:5px;
+    padding: 5px
 }
 
 .botón-de-register {
-    width: 30%;
-    background-color: #1259c3;
-    justify-content: center;
-    padding: 3px;
-    border-radius: 15px;
     margin: 5px;
+    transition: 450ms;
+    width: 116%;
+    height: 30px;
+    border: solid 1px lightgray;
+    border-radius: 5px;
 }
 
 .botón-de-borrar {
-    width: 30%;
-    background-color: #ff0000;
-    justify-content: center;
-    padding: 3px;
-    border-radius: 15px;
     margin: 5px;
+    transition: 450ms;
+    width: 116%;
+    height: 30px;
+    border: solid 1px lightgray;
+    border-radius: 5px;
 }
 
 /* LOGIN ----------------------------------------------------------------------------------------- */
 
+.inicio-de-sesion {
+    font-size: 40px;
+    padding: 20px;
+    text-decoration: underline;
+}
+
 .form-login {
-    background-color: antiquewhite;
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
+    display: grid;
+    justify-content: center;
     margin: 10px;
 }
 
-.botón-de-login {
-    width: 30%;
-    justify-content: center;
-    padding: 3px;
-    border-radius: 15px;
-    transition: 450ms;
+label {
+    display: block;
     margin: 5px;
+    font-size: 20px;
+}
+
+.input-de-login {
+    border: solid 1px lightgray;
+    width: 120%;
+    height: 30px;
+}
+
+.required {
+    color: orangered;
+    padding: 2px;
+}
+
+.botón-de-login {
+    margin: 5px;
+    transition: 450ms;
+    width: 116%;
+    height: 30px;
+    border: solid 1px lightgray;
+    border-radius: 5px;
 }
 
 /* MEDIA CUERIS ----------------------------------------------------------------------------------- */

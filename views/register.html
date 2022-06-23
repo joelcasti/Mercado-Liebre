@@ -53,59 +53,63 @@
 
 <!-- ----------------------------------FORMULARIO----------------------------------------- -->
 
-    <form action="/" method="get" class="form-register">
-        <label for="nombre-y-apellido">Nombre y Apellido</label>
-        <input type="text" name="nombre-y-apellido" id="nombre-y-apellido" required minlength="3"
-        maxlength="15">
+    <form action="/" method="get">
+        <div class="form-register">
+            <h2 class="registrarse">Registrarse</h2>
+            <label for="nombre-y-apellido">Nombre y Apellido<span class="required">*</span></label>
+            <input type="text" class="input-de-register" name="nombre-y-apellido" id="nombre-y-apellido" required minlength="3"
+            maxlength="15">
         
-        <label for="nombre-de-usuari@">Nombre de usuari@</label>
-        <input type="text" name="nombre-de-usuari@" id="nombre-de-usuari@" required minlength="3"
-        maxlength="15">
+            <label for="nombre-de-usuari@">Nombre de usuari@<span class="required">*</span></label>
+            <input type="text" class="input-de-register" name="nombre-de-usuari@" id="nombre-de-usuari@" required minlength="3"
+            maxlength="15">
 
-        <label for="fecha-de-nacimiento">Fecha de nacimiento</label>
-        <input type="date" name="fecha-de-nacimiento" id="fecha-de-nacimiento" value="2022-01-01" min="1920-01-01">
+            <label for="fecha-de-nacimiento">Fecha de nacimiento<span class="required">*</span></label>
+            <input type="date" class="input-de-register" name="fecha-de-nacimiento" id="fecha-de-nacimiento" value="2022-01-01" min="1920-01-01">
 
-        <label for="domicilio">Domicilio</label>
-        <input type="text" name="domicilio" id="domicilio"required minlength="3"
-        maxlength="20">
+            <label for="domicilio">Domicilio<span class="required">*</span></label>
+            <input type="text" class="input-de-register" name="domicilio" id="domicilio"required minlength="3"
+            maxlength="20">
 
-        <label for="perfil-del-usuario">Perfil de Usuario
-        <label for="perfil-del-usuario">Comprador</label>
-        <input type="radio" name="perfil-del-usuario" value="comprador" required>
-        <label for="perfil-del-usuario">Vendedor</label>
-        <input type="radio" name="perfil-del-usuario" value="vendedor" required>
-        </label>
+            <h2 for="perfil-del-usuario" class="perfil-del-usuario">Perfil de Usuario<span class="required">*</span></h2>
+            <div class="compra-venta">
+                <label for="perfil-del-usuario">Comprador</label>
+                <input type="radio" class="input-de-c-o-v" name="perfil-del-usuario" value="comprador" required>
+                <label for="perfil-del-usuario">Vendedor</label>
+                <input type="radio" class="input-de-c-o-v" name="perfil-del-usuario" value="vendedor" required>
+            </div>
 
-        <label for="categorías-de-interés" class="intereses">Categorías de interés</label>
+            <h2 for="categorías-de-interés" class="categorías-de-interés">Categorías de interés</h2>
+            <div class="intereses">
+                <label for="categorías-de-interés">Electro</label>
+                <input type="checkbox" class="input-de-intereses" class="input-de-register" name="categorías-de-interés" value="electro">
 
-        <label for="categorías-de-interés">Electro</label>
-        <input type="checkbox" name="categorías-de-interés" value="electro">
+                <label for="categorías-de-interés">Moda</label>
+                <input type="checkbox" class="input-de-intereses" name="categorías-de-interés" value="moda">
 
-        <label for="categorías-de-interés">Moda</label>
-        <input type="checkbox" name="categorías-de-interés" value="moda">
-
-        <label for="categorías-de-interés">Hogar</label>
-        <input type="checkbox" name="categorías-de-interés" value="hogar">
+                <label for="categorías-de-interés">Hogar</label>
+                <input type="checkbox" class="input-de-intereses" name="categorías-de-interés" value="hogar">
         
-        <label for="categorías-de-interés">Juguetería</label>
-        <input type="checkbox" name="categorías-de-interés" value="juguetería">
+                <label for="categorías-de-interés">Juguetería</label>
+                <input type="checkbox" class="input-de-intereses" name="categorías-de-interés" value="juguetería">
 
-        <label for="categorías-de-interés">Vida Sana</label>
-        <input type="checkbox" name="categorías-de-interés" value="vida-sana">
-        
+                <label for="categorías-de-interés">Vida Sana</label>
+                <input type="checkbox" class="input-de-intereses" name="categorías-de-interés" value="vida-sana">
+            </div>
 
-        <label for="foto-de-usuario">Foto de Usuario</label>
-        <input type="file" name="foto-de-usuario" accept=".jpg">
+            <label for="foto-de-usuario">Foto de Usuario</label>
+            <input type="file" class="input-de-foto" name="foto-de-usuario" accept=".jpg">
 
-        <label for="contraseña">Contraseña</label>
-        <input type="password" name="password" id="contraseña" required>
+            <label for="contraseña">Contraseña<span class="required">*</span></label>
+            <input type="password" class="input-de-register" name="password" id="contraseña" required>
 
-        <label for="contraseña">Confirmar Contraseña</label>
-        <input type="password" name="password" id="contraseña" required>
+            <label for="contraseña">Confirmar Contraseña<span class="required">*</span></label>
+            <input type="password" class="input-de-register" name="password" id="c.contraseña" required>
 
-        <button type="submit" class="botón-de-register">Registrarse</button>
+            <button type="submit" class="botón-de-register">Registrarse</button>
 
-        <button type="reset" class="botón-de-borrar">Borrar</button>
+            <button type="reset" class="botón-de-borrar">Borrar</button>
+        </div>
     </form>
 
 <!-- -----------------------------------FOOTER------------------------------------------------ -->

@@ -54,16 +54,22 @@
 
 <!-- ----------------------------------FORMULARIO----------------------------------------- -->
 
-    <form action="/" method="get" class="form-login">
+    <form action="/" method="get">
+        <div class="form-login">
+            <h2 class="inicio-de-sesion">Incio De Sesion</h2>
+            <div>
+                <label for="nombre-de-usuari@">Nombre de usuari@<span class="required">*</span></label>
+                <input type="text" class="input-de-login" name="nombre-de-usuari@" id="nombre-de-usuari@" required minlength="3"
+                maxlength="15">
+            </div>
 
-        <label for="nombre-de-usuari@">Nombre de usuari@</label>
-        <input type="text" name="nombre-de-usuari@" id="nombre-de-usuari@" required minlength="3"
-        maxlength="15">
+            <div>
+                <label for="contraseña">Contraseña<span class="required">*</span></label>
+                <input type="password" class="input-de-login" name="password" id="contraseña" required>
+            </div>
 
-        <label for="contraseña">Contraseña</label>
-        <input type="password" name="password" id="contraseña" required>
-
-        <button type="submit" class="botón-de-login">Iniciar Sesion</button>
+            <button type="submit" class="botón-de-login">Iniciar Sesion</button>
+            </div>
     </form>
 
 <!-- -----------------------------------FOOTER------------------------------------------------ -->
