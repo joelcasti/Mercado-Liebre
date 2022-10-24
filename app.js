@@ -4,12 +4,19 @@ const app = express();
 app.use(express.urlencoded( {extended : false} ));
 app.use(express.json());
 app.use(express.static('public'));
+const methodOverride = require("method-override");
+app.use(methodOverride ("_method"));
 app.set('view engine', 'ejs');
 
-const indexRouter = require('./src/routes/indexRouter');
-const userRouter = require('./src/routes/userRouter');
-app.use('/', indexRouter);
-app.use('/user', userRouter);
+// Rutas principales
+const indexRoutes = require('./src/routes/indexRoutes');
+const userRoutes = require('./src/routes/userRoutes');
+app.use('/', indexRoutes);
+app.use('/user', userRoutes);
+
+//Rutas hacia las API's
+const productsApiRoutes = require('./src/routes/api/productsApiRoutes');
+app.use('/api/products', productsApiRoutes);
 
 app.listen(process.env.PORT || 3000, () => {
     console.log("Servidor corriendo en marcha");
