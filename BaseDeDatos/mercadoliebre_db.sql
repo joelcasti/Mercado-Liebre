@@ -77,6 +77,7 @@ CREATE TABLE `products` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   `price` int NOT NULL,
+  `description` varchar(250) NOT NULL,
   `img` varchar(45) NOT NULL,
   `category_id` int NOT NULL,
   `offer_id` int NOT NULL,
@@ -95,7 +96,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Cafetera Moulinex',6770,'img-cafetera-moulinex.jpg',3,2,'2022-10-23 13:14:47'),(2,'MacBook Pro 2019',230000,'img-macbook-pro-2019.jpg',4,1,'2022-10-23 13:16:22'),(3,'SmartTv Samsung 43',23200,'img-tv-samsung-smart.jpg',2,3,'2022-10-23 13:17:31'),(4,'Samsung Galaxy s10',130000,'img-samsung-galaxy-s10.jpg',1,1,'2022-10-23 13:19:18');
+INSERT INTO `products` VALUES (1,'Cafetera Moulinex',6770,'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate at esse quasi ab consequuntur sunt ipsa aliquam quidem asperiores inventore veniam qui fugit, architecto, molestias atque quaerat. Vitae, doloremque odit.','img-cafetera-moulinex.jpg',3,2,'2022-10-23 13:14:47'),(2,'MacBook Pro 2019',230000,'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate at esse quasi ab consequuntur sunt ipsa aliquam quidem asperiores inventore veniam qui fugit, architecto, molestias atque quaerat. Vitae, doloremque odit.','img-macbook-pro-2019.jpg',4,1,'2022-10-23 13:16:22'),(3,'SmartTv Samsung 43',23200,'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate at esse quasi ab consequuntur sunt ipsa aliquam quidem asperiores inventore veniam qui fugit, architecto, molestias atque quaerat. Vitae, doloremque odit.','img-tv-samsung-smart.jpg',2,3,'2022-10-23 13:17:31'),(4,'Samsung Galaxy s10',130000,'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate at esse quasi ab consequuntur sunt ipsa aliquam quidem asperiores inventore veniam qui fugit, architecto, molestias atque quaerat. Vitae, doloremque odit.','img-samsung-galaxy-s10.jpg',1,1,'2022-10-23 13:19:18');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -108,4 +109,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-23 13:26:00
+-- Dump completed on 2022-10-24 15:35:36
