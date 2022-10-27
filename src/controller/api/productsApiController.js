@@ -23,6 +23,23 @@ const productsApiController = {
             })
         })
     },
+    search: (req, res) => {
+        // let palabra = req.query.keyword;
+
+        // db.Product.findAll({
+        //     where: {
+        //         name: {
+        //             [Op.like]: '%' + palabra + '%'
+        //         }
+        //     }
+        // })
+        // .then(products => {
+        //     if(products.length > 0) {
+        //         return res.status(200).json(products)
+        //     }
+        //     return res.status(200).json("No se ha encontrado el producto")
+        // })
+    },
     create: (req, res) => {
         db.Product.create(req.body)
         .then(product => {
@@ -34,12 +51,18 @@ const productsApiController = {
         })
     },
     update: (req, res) => {
-        db.Product.update(req.body)
+        let id = req.params.id;
+
+        db.Product.update(req.body, {
+            where: {
+                id: id
+            }
+        })
         .then(product => {
             return res.status(200).json({
                 data: product,
                 status: 200,
-                created: 'OK'
+                update: 'OK'
             })
         })
     },

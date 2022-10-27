@@ -13,14 +13,14 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     let config = {
-        tableName: 'category',
+        tableName: 'offers',
         timestamps: false
     };
 
-    const Category = sequelize.define(alias, cols, config);
+    const Offer = sequelize.define(alias, cols, config);
 
-    Category.associate = models => {
-        Category.hasMany(models.Product,
+    Offer.associate = models => {
+        Offer.hasMany(models.Product,
             {
                 as: 'products',
                 foreignKey: 'offer_id'
@@ -28,5 +28,5 @@ module.exports = (sequelize, dataTypes) => {
         );
     }
 
-    return Category;
+    return Offer;
 };

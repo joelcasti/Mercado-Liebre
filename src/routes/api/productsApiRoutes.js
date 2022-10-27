@@ -7,6 +7,8 @@ const productsApiController = require('../../controller/api/productsApiControlle
 router.get('/', productsApiController.list);
 //Detalles de productos
 router.get('/:id', productsApiController.detail);
+//Buscador de productos
+// router.get('/search', productsApiController.search);
 //Creacion de productos
 router.post('/create', productsApiController.create);
 //Actualizar/Edicion de productos
