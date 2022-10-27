@@ -16,7 +16,11 @@ app.use('/user', userRoutes);
 
 //Rutas hacia las API's
 const productsApiRoutes = require('./src/routes/api/productsApiRoutes');
+const categoryApiRoutes = require('./src/routes/api/categoryApiRoutes');
+const offerApiRoutes = require('./src/routes/api/offerApiRoutes');
 app.use('/api/products', productsApiRoutes);
+app.use('/api/category', categoryApiRoutes);
+app.use('/api/offer', offerApiRoutes);
 
 app.listen(process.env.PORT || 3000, () => {
     console.log("Servidor corriendo en marcha");
