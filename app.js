@@ -11,8 +11,10 @@ app.set('view engine', 'ejs');
 // Rutas principales
 const indexRoutes = require('./src/routes/indexRoutes');
 const userRoutes = require('./src/routes/userRoutes');
+const productsRoutes = require('./src/routes/productsRoutes');
 app.use('/', indexRoutes);
 app.use('/user', userRoutes);
+app.use('/products', productsRoutes);
 
 //Rutas hacia las API's
 const productsApiRoutes = require('./src/routes/api/productsApiRoutes');

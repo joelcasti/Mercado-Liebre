@@ -1,45 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
-<%- include('partials/head', {title: producto.name}) %>
+<%- include('partials/head') %>
 <body>
 	<!-- Header -->
 	<%- include('partials/headerNavbar') %>
 	<!-- /Header -->
-        <div class="logo-y-header">
-        <img src="/images/logo-mercado-liebre.svg" class="logo">
-
-        <form action="" method="get">
-            <input type="text" name="barra-de-busqueda" class="barra-de-busqueda" size="50" placeholder="Buscar productos, marcas y más">
-            <div class="lupa-de-busqueda">
-                <i class="fas fa-search" id="lupa"></i>
-            </div>
-        </form>
-
-        <div class="text-centrado"><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</div>
-        </div>
-
-        <div class="caja-de-listas">  
-            <ul class="listas">
-                <li><a href="/Ofertas">Ofertas</a></li>
-                <li><a href="/Tiendas-Oficiales">Tiendas Oficiales</a></li>
-                <li><a href="/Vender">Vender</a></li>
-                <li><a href="/Ayuda">Ayuda</a></li>
-            </ul>
-    
-            <ul class="listas2">
-                <li><a href="/register">Creá tu cuenta<i class="far fa-address-card"></i></a></li>
-                <li><a href="/login">Ingresá<i class="fas fa-sign-in-alt"></i></a></li>
-                <li><a href="/Mis-compras">Mis compras<i class="fas fa-shopping-basket"></i></a></li>
-            </ul>
-        </div>
-
-        <div class="burger-menu">
-            <i class="fas fa-bars" id="burger"></i>
-        </div>
-
-        <img src="/images/img-home-banner.jpg" class="imagen-de-banner" alt="">
-    </header>
 
 <!-- --------------------------------------MAIN----------------------------------------------- -->
 
@@ -50,19 +16,19 @@
         <section class="seccion-de-articulos">
 
             <% for(let products of allProducts) { %>
-            <article class="articulo-de-producto">
-                <img src="/images/<%= products.img %>" class="images" alt="">
+            <a href="/products/detail/<%= products.id%>" class="articulo-de-producto">
+                <img src="/images/products/<%= products.img %>" class="images" alt="">
                 <div>
                     <div class="camion">
                         <i class="fas fa-truck" id="truck"></i>
                     </div>
                     <div class="detalles-del-producto">
-                        <p class="precio">$<%= products.price %></p>
-                        <p class="descuento"><%= %>% OFF</p>
+                        <p class="precio">$<%= (products.price / products.offer.offer) %></p>
+                        <p class="descuento"><%= products.offer.offer %>% OFF</p>
                     </div>
                     <h2 class="descripcion-de-articulo"><%= products.name %></h2>
                 </div>
-            </article>
+            </a>
             <% } %>
         </section>
 
@@ -71,19 +37,19 @@
         <section class="seccion-de-articulos">
 
             <% for(let products of allProducts) { %>
-                <article class="articulo-de-producto">
-                    <img src="/images/<%= products.img %>" class="images" alt="">
+                <a href="/products/detail/<%= products.id%>" class="articulo-de-producto">
+                    <img src="/images/products/<%= products.img %>" class="images" alt="">
                     <div>
                         <div class="camion">
                             <i class="fas fa-truck" id="truck"></i>
                         </div>
                         <div class="detalles-del-producto">
-                            <p class="precio">$<%= products.price %></p>
-                            <p class="descuento"><%= %>% OFF</p>
+                            <p class="precio">$<%= (products.price / products.offer.offer) %></p>
+                            <p class="descuento"><%= products.offer.offer %>% OFF</p>
                         </div>
                         <h2 class="descripcion-de-articulo"><%= products.name %></h2>
                     </div>
-                </article>
+                </a>
                 <% } %>
         </section>
     </main>
