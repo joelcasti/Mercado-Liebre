@@ -1,23 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    rel="stylesheet" />
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Mercado Liebre</title>
-</head>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: producto.name}) %>
 <body>
-
-    <!-- ------------------------------------HEADER----------------------------------------------- -->
-
-
-    <header>
+	<!-- Header -->
+	<%- include('partials/headerNavbar') %>
+	<!-- /Header -->
         <div class="logo-y-header">
         <img src="/images/logo-mercado-liebre.svg" class="logo">
 
@@ -61,159 +49,49 @@
 
         <section class="seccion-de-articulos">
 
+            <% for(let products of allProducts) { %>
             <article class="articulo-de-producto">
-                <img src="/images/img-cafetera-moulinex.jpg" class="images" alt="">
+                <img src="/images/<%= products.img %>" class="images" alt="">
                 <div>
                     <div class="camion">
                         <i class="fas fa-truck" id="truck"></i>
                     </div>
                     <div class="detalles-del-producto">
-                        <p class="precio">$6.770</p>
-                        <p class="descuento">40% OFF</p>
+                        <p class="precio">$<%= products.price %></p>
+                        <p class="descuento"><%= %>% OFF</p>
                     </div>
-                    <h2 class="descripcion-de-articulo">Cafetera Moulinex</h2>
+                    <h2 class="descripcion-de-articulo"><%= products.name %></h2>
                 </div>
             </article>
-            
-            <article class="articulo-de-producto">
-                <img src="/images/img-macbook-pro-2019.jpg" class="images" alt="">
-                <div>
-                    <div class="camion">
-                        <i class="fas fa-truck" id="truck"></i>
-                    </div>
-                    <div class="detalles-del-producto">
-                        <p class="precio">$230.000</p>
-                        <p class="descuento">20% OFF</p>
-                    </div>
-                    <h2 class="descripcion-de-articulo">MacBook Pro 2019</h2>
-                </div>
-            </article>
-
-            <article class="articulo-de-producto">
-                <img src="/images/img-samsung-galaxy-s10.jpg" class="images" alt="">
-                <div>
-                    <div class="camion">
-                        <i class="fas fa-truck" id="truck"></i>
-                    </div>
-                    <div class="detalles-del-producto">
-                        <p class="precio">$230.000</p>
-                        <p class="descuento">20% OFF</p>
-                    </div>
-                    <h2 class="descripcion-de-articulo">MacBook Pro 2019</h2>
-                </div>
-            </article>
-
-            <article  class="articulo-de-producto">
-                <img src="/images/img-tv-samsung-smart.jpg" class="images" alt="">
-                <div>
-                    <div class="camion">
-                        <i class="fas fa-truck" id="truck"></i>
-                    </div>
-                    <div class="detalles-del-producto">
-                        <p class="precio">$23.200</p>
-                        <p class="descuento">5% OFF</p>
-                    </div>
-                    <h2 class="descripcion-de-articulo">SmartTv Samsung 43"</h2>
-                </div>
-            </article>
-            
+            <% } %>
         </section>
 
         <h1 class="titulares">Ofertas</h1>
 
         <section class="seccion-de-articulos">
 
-            <article class="articulo-de-producto">
-                <img src="/images/img-cafetera-moulinex.jpg" class="images" alt="">
-                <div>
-                    <div class="camion">
-                        <i class="fas fa-truck" id="truck"></i>
+            <% for(let products of allProducts) { %>
+                <article class="articulo-de-producto">
+                    <img src="/images/<%= products.img %>" class="images" alt="">
+                    <div>
+                        <div class="camion">
+                            <i class="fas fa-truck" id="truck"></i>
+                        </div>
+                        <div class="detalles-del-producto">
+                            <p class="precio">$<%= products.price %></p>
+                            <p class="descuento"><%= %>% OFF</p>
+                        </div>
+                        <h2 class="descripcion-de-articulo"><%= products.name %></h2>
                     </div>
-                    <div class="detalles-del-producto">
-                        <p class="precio">$6.770</p>
-                        <p class="descuento">40% OFF</p>
-                    </div>
-                    <h2 class="descripcion-de-articulo">Cafetera Moulinex</h2>
-                </div>
-            </article>
-            
-            <article class="articulo-de-producto">
-                <img src="/images/img-macbook-pro-2019.jpg" class="images" alt="">
-                <div>
-                    <div class="camion">
-                        <i class="fas fa-truck" id="truck"></i>
-                    </div>
-                    <div class="detalles-del-producto">
-                        <p class="precio">$230.000</p>
-                        <p class="descuento">20% OFF</p>
-                    </div>
-                    <h2 class="descripcion-de-articulo">MacBook Pro 2019</h2>
-                </div>
-            </article>
-
-            <article class="articulo-de-producto">
-                <img src="/images/img-samsung-galaxy-s10.jpg" class="images" alt="">
-                <div>
-                    <div class="camion">
-                        <i class="fas fa-truck" id="truck"></i>
-                    </div>
-                    <div class="detalles-del-producto">
-                        <p class="precio">$230.000</p>
-                        <p class="descuento">20% OFF</p>
-                    </div>
-                    <h2 class="descripcion-de-articulo">MacBook Pro 2019</h2>
-                </div>
-            </article>
-
-            <article class="articulo-de-producto">
-                <img src="/images/img-tv-samsung-smart.jpg" class="images" alt="">
-                <div>
-                    <div class="camion">
-                        <i class="fas fa-truck" id="truck"></i>
-                    </div>
-                    <div class="detalles-del-producto">
-                        <p class="precio">$23.200</p>
-                        <p class="descuento">5% OFF</p>
-                    </div>
-                    <h2 class="descripcion-de-articulo">SmartTv Samsung 43"</h2>
-                </div>
-            </article>
+                </article>
+                <% } %>
         </section>
     </main>
 
 <!-- -----------------------------------FOOTER------------------------------------------------ -->
 
-    <footer>
-        <div class="caja-del-footer">
-            <div class="secciones-del-footer">
-                <div class="iconos-footer">
-                    <i class="fas fa-credit-card"></i>
-                </div>
-                <h3>Pagá con tarjeta o en efectivo</h3>
-                <p class="descripcion">Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
-                puntos de pago. ¡Y siempre es seguro!</p>
-            </div>
-            
-            <div class="secciones-del-footer">
-                <div class="iconos-footer">
-                    <i class="fas fa-gift"></i>
-                </div>
-                <h3>Envío gratis desde $ 2.500</h3>
-                <p class="descripcion">Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
-                productos. Es un beneficio de Mercado Puntos.</p>
-            </div>
-    
-            <div class="secciones-del-footer">    
-                <div class="iconos-footer">
-                    <i class="fas fa-user-shield"></i>
-                </div>
-                <h3>Seguridad, de principio a fin</h3>
-                <p class="descripcion">¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
-                porque estás siempre protegid@.</p>
-            </div>
-        </div>
-
-            <h3>Copyright © 1999-2020 MercadoLiebre S.R.L.</h3>
-    </footer>
-</body>
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
 </html>
