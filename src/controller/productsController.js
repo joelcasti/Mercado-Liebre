@@ -32,6 +32,9 @@ const productsController = {
         .then(results => {
             res.render('results', {results, productFinded})
         })
+    },
+    create: (req, res) => {
+        res.render('product-create-form');
     }
 }
 
