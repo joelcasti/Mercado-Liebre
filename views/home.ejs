@@ -23,7 +23,7 @@
                         <i class="fas fa-truck" id="truck"></i>
                     </div>
                     <div class="detalles-del-producto">
-                        <p class="precio">$<%= (products.price / products.offer.offer) %></p>
+                        <p class="precio">$<%= (products.price * products.offer.offer) / 100 %></p>
                         <p class="descuento"><%= products.offer.offer %>% OFF</p>
                     </div>
                     <h2 class="descripcion-de-articulo"><%= products.name %></h2>
@@ -44,7 +44,7 @@
                             <i class="fas fa-truck" id="truck"></i>
                         </div>
                         <div class="detalles-del-producto">
-                            <p class="precio">$<%= (products.price / products.offer.offer) %></p>
+                            <p class="precio">$<%= (products.price * products.offer.offer) / 100 %></p>
                             <p class="descuento"><%= products.offer.offer %>% OFF</p>
                         </div>
                         <h2 class="descripcion-de-articulo"><%= products.name %></h2>
